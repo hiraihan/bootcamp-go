@@ -270,6 +270,14 @@ func main() {
 			"message": "API Running",
 		})
 	})
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(map[string]string{
+			"message": "Selamat datang di API Produk",
+		})
+	})
+
 	fmt.Println("Server running di localhost:8080")
 
 	err := http.ListenAndServe(":8080", nil)
