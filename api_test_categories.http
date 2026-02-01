@@ -1,0 +1,25 @@
+### Create Category
+POST http://localhost:8080/api/categories
+Content-Type: application/json
+
+{
+    "name": "Makanan"
+}
+
+### Create Product with Category
+# NOTE: Replace 'category_id' with the ID returned from the previous request
+POST http://localhost:8080/api/produk
+Content-Type: application/json
+
+{
+    "name": "Nasi Goreng Spesial",
+    "price": 25000,
+    "stock": 100,
+    "category_id": 1
+}
+
+### Get All Products (Should show category_name)
+GET http://localhost:8080/api/produk
+
+### Get All Categories
+GET http://localhost:8080/api/categories
