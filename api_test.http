@@ -8,40 +8,6 @@
 GET http://localhost:8080/health
 
 ### -----------------------
-### MODULE: CATEGORY
-### -----------------------
-
-### 1. Get All Categories
-GET {{baseUrl}}/category
-Content-Type: application/json
-
-### 2. Get Category By ID
-GET {{baseUrl}}/category/1
-Content-Type: application/json
-
-### 3. Create New Category
-POST {{baseUrl}}/category
-Content-Type: application/json
-
-{
-    "nama": "Elektronik",
-    "deskripsi": "Gadget dan alat listrik"
-}
-
-### 4. Update Category (Ganti ID sesuai kebutuhan)
-PUT {{baseUrl}}/category/1
-Content-Type: application/json
-
-{
-    "nama": "Makanan Berat",
-    "deskripsi": "Nasi dan lauk pauk"
-}
-
-### 5. Delete Category
-DELETE {{baseUrl}}/category/3
-Content-Type: application/json
-
-### -----------------------
 ### MODULE: PRODUK
 ### -----------------------
 
@@ -58,9 +24,9 @@ POST {{baseUrl}}/produk
 Content-Type: application/json
 
 {
-    "nama": "Teh Pucuk Harum",
-    "harga": 4000,
-    "stok": 50
+    "name": "Teh Pucuk Harum",
+    "price": 4000,
+    "stock": 50
 }
 
 ### 4. Update Produk
@@ -68,9 +34,9 @@ PUT {{baseUrl}}/produk/2
 Content-Type: application/json
 
 {
-    "nama": "Vit 600ml (Update)",
-    "harga": 2500,
-    "stok": 35
+    "name": "Vit 600ml (Update)",
+    "price": 2500,
+    "stock": 35
 }
 
 ### 5. Delete Produk
